@@ -1,8 +1,8 @@
 #main-bar {
   width: 100%;
-  height: 10%;
+  height: 10%; /* This will need to change */
   position: absolute;
-  top: 50%;
+  top: 50%; /* This will need to change */
   color: white;
 }
 

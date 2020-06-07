@@ -1,18 +1,21 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import "./Weather.css";
-import DayThunderstorm from "../../icons/DayThunderstorm";
-import NightThunderstorm from "../../icons/NightThunderstorm";
-import Drizzle from "../../icons/Drizzle";
-import DayRain from "../../icons/DayRain";
-import NightRain from "../../icons/NightRain";
-import Sleet from "../../icons/Sleet";
-import Snow from "../../icons/Snow";
-import Fog from "../../icons/Fog";
-import Tornado from "../../icons/Tornado";
-import DayClear from "../../icons/DayClear";
-import NightClear from "../../icons/NightClear";
-import DayCloud from "../../icons/DayCloud";
-import NightCloud from "../../icons/NightCloud";
+import {
+  DayThunderstorm,
+  NightThunderstorm,
+  Drizzle,
+  DayRain,
+  NightRain,
+  Sleet,
+  Snow,
+  Fog,
+  Tornado,
+  DayClear,
+  NightClear,
+  DayCloud,
+  NightCloud,
+} from "../../icons";
 
 const Weather = () => {
   const apiKey = process.env.REACT_APP_WEATHER_API_KEY;

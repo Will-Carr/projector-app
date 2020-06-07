@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Clock from "../Clock";
+import Weather from "../Weather";
 import "./MainBar.css";
 
 const MainBar = () => {
-  const [currentComponentName] = useState("clock");
+  const [currentComponentName] = useState("weather");
   const [currentComponent, setCurrentComponent] = useState();
 
   // Update which component we're displaying
   useEffect(() => {
     switch (currentComponentName) {
+      case "weather":
+        setCurrentComponent(<Weather />);
+        break;
       case "clock":
       default:
         setCurrentComponent(<Clock />);

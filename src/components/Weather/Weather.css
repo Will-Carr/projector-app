@@ -1,0 +1,29 @@
+#weather {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+#weather-icon {
+  height: 1em;
+  width: 1em;
+  position: relative;
+}
+
+#weather-icon svg {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#high-low-temp {
+  font-size: .5em;
+}
+
+#cur-temp,
+#high-low-temp {
+  margin-left: 1em;
+}

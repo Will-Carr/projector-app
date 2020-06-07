@@ -125,7 +125,7 @@ const Weather = () => {
     return () => {
       clearInterval(interval);
     };
-  }, [setCurrentTemp, setLowTemp, setHighTemp, setWeatherIcon]);
+  }, [url, setCurrentTemp, setLowTemp, setHighTemp, setWeatherIcon]);
 
   return (
     <div id="weather">

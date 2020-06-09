@@ -1,0 +1,22 @@
+#music {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+#album-art {
+  height: 1em;
+  width: 1em;
+  position: relative;
+}
+
+#album-art img {
+  height: 100%;
+}
+
+#song-artist {
+  font-size: 0.5em;
+  margin-left: 1rem;
+}

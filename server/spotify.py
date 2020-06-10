@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_cors import CORS
 import requests
 import base64
@@ -59,4 +59,4 @@ def get_auth():
         "artist": song_artist,
         "art": song_art,
     }
-    return song_data
+    return jsonify(song_data)

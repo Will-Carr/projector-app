@@ -43,6 +43,7 @@ const MainBar = () => {
   );
 
   // Variables related to music playing
+  // Ideally this would be in the Music component, but it's pretty tied to the state of the bar
   const spotifyUrl = "http://localhost:5000/api/spotify";
   const [song, setSong] = useState("");
   const [artist, setArtist] = useState("");
@@ -75,7 +76,7 @@ const MainBar = () => {
           }
         })
         .catch(() => {
-          // Eventually do something
+          setMusicPlaying(false);
         });
     };
 

@@ -44,19 +44,25 @@ def get_auth():
     # If a song is playing, it will return 200 and data
     # If not / a private session, it will return a 204
     if song_data_resp.status_code != 200:
-        return {}
+        return jsonify({})
 
     response_data = song_data_resp.json()
 
-    # Finally, return the song title, artist, and art url
-    song_name = response_data["item"]["name"]
-    song_artist_list = [artist["name"] for artist in response_data["item"]["artists"]]
-    song_artist = ", ".join(song_artist_list)
-    song_art = response_data["item"]["album"]["images"][0]["url"]
+    # If the data came back good, return the song title, artist, and art url
+    try:
+        song_name = response_data["item"]["name"]
+        song_artist_list = [artist["name"] for artist in response_data["item"]["artists"]]
+        song_artist = ", ".join(song_artist_list)
+        song_art = response_data["item"]["album"]["images"][0]["url"]
 
-    song_data = {
-        "name": song_name,
-        "artist": song_artist,
-        "art": song_art,
-    }
+        song_data = {
+            "name": song_name,
+            "artist": song_artist,
+            "art": song_art,
+        }
+        
+    # We can reach here if it's a podcast, for example
+    except Exception:
+        song_data = {}
+
     return jsonify(song_data)
